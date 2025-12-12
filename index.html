@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- This tells the browser that this is an HTML5 document -->
+
+<html lang="en">
+<!-- The whole website starts here, language = English -->
+
+<head>
+    <!-- Head contains the settings of the website (not visible on the page) -->
+
+    <meta charset="UTF-8">
+    <!-- Tells browser how to read text (UTF-8 supports all languages) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Makes the website size adjust for mobile phones -->
+
+    <title>Ashish Patel</title>
+    <!-- Title shown on the browser tab -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Connecting the CSS file to style this HTML -->
+</head>
+
+<body>
+    <!-- Everything visible on the page goes inside <body> -->
+
+    <!-- ===========================
+         NAVIGATION BAR (TOP MENU)
+         ============================ -->
+    <header>
+        <nav>
+            <ul>
+                <!-- This is a list of menu items -->
+                <li><a href="index.html">Ashish Patel</a></li>
+                <!-- Clicking this takes you to home page -->
+
+                <li><a href="index.html">Instagram</a></li>
+                <!-- Same link right now, later you can change -->
+
+                <li><a href="index.html">LinkedIn</a></li>
+                <!-- Same here — temporary link -->
+
+                <li><a href="#my-work">My Work</a></li>
+                <!-- This scrolls down to the “My Work” section -->
+
+                <li><a href="index.html">Contact</a></li>
+                <!-- Temporary link for contact -->
+            </ul>
+        </nav>
+
+        <!-- Flex container = image + text side by side -->
+        <div class="flex-container">
+            
+            <!-- Left side image -->
+            <img src="images/man.png" alt="" height="400px" width="300px">
+            <!-- Photographer image -->
+
+            <!-- Right side text -->
+            <div class="text-container">
+                <h1>Hey Friends!</h1>
+
+                <p>
+                    I am Ashsih <strong>Photographer</strong> and 
+                    <strong>Instagram Creator</strong> with a passion of
+                    capturing moments that tells magical stories
+                </p>
+
+                <!-- Buttons -->
+                <a href="" class="cta-button">Follow Me on Instagram</a>
+                <a href="#my-work" class="cta-button secondary">See my Work</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ===========================
+         SECTION 2 — ABOUT/HELP AREA
+         ============================ -->
+    <section>
+        <div class="flex-container">
+            
+            <!-- Text on left -->
+            <div class="text-container">
+                <h2>How can I help you?</h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Earum tenetur quod magni debitis quia voluptatibus...
+                </p>
+            </div>
+
+            <!-- Image on right -->
+            <img width="350px" src="images/photography.png" alt="">
+        </div>
+    </section>
+
+
+    <!-- ===========================
+         SECTION 3 — PHOTO GALLERY
+         ============================ -->
+    <section id="my-work">
+        <!-- id="my-work" lets menu scroll to here -->
+        
+        <h2>Some of My Best Pictures</h2>
+
+        <!-- Grid = multiple pictures arranged nicely -->
+        <div class="grid-container">
+            <img style="grid-area: img-1;" src="images/img1.png" alt="">
+            <img style="grid-area: img-2;" src="images/img2.png" alt="">
+            <img style="grid-area: img-3;" src="images/img3.png" alt="">
+            <img style="grid-area: img-4;" src="images/img4.png" alt="">
+            <img style="grid-area: img-5;" src="images/imgg55.png" alt="">
+        </div>
+
+        <!-- Button below gallery -->
+        <a href="" class="cta-button">More on my Instagram</a>
+    </section>
+
+
+    <!-- ===========================
+         SECTION 4 — FAQ SECTION
+         ============================ -->
+    <section>
+        <h2>Common Questions</h2>
+
+        <!-- "details" = a box that opens/closes -->
+        <details>
+            <summary>How much does it cost?</summary>
+            <!-- Text that shows when opened -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+        </details>
+
+        <details>
+            <summary>How much does it cost?</summary>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+        </details>
+
+        <details>
+            <summary>How much does it cost?</summary>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+        </details>
+    </section>
+
+
+    <!-- ===========================
+         FOOTER (BOTTOM OF WEBSITE)
+         ============================ -->
+    <footer>
+        <!-- Simple bottom links -->
+        <a href="">LinkedIn</a>
+        <a href="#my-work">My Work</a>
+        <a href="mailto:examplegmail.com">Contact</a>
+        <!-- mailto makes clicking open email -->
+    </footer>
+</body>
+
+</html>

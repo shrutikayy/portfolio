@@ -1,0 +1,285 @@
+/* Importing fonts from Google so the text looks stylish */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+
+/* ------------------------------
+   COLORS STORED LIKE VARIABLES
+   ------------------------------ */
+:root {
+    --base-color: #fefdfd;      /* Main background color */
+    --text-color: #000000;      /* Text color */
+    --primary-color: #ffc06e;   /* Yellow button color */
+    --secondary-color: #8D8DFF; /* Blue button color */
+    --color-1: #F9F6F3;         /* Light background for header */
+    --color-2: #F3F7F9;         /* Light background for sections */
+    --color-3: #F6F3F9;         /* Light background for gallery */
+}
+
+
+/* Reset default browser spacing */
+* {
+    margin: 0;              /* Removes all outer space */
+    padding: 0;             /* Removes all inner space */
+    box-sizing: border-box; /* Makes sizing easier */
+}
+
+html {
+    font-family: poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Overall website font */
+    color: var(--text-color); /* Text color */
+}
+
+body {
+    padding: 1em;                          /* Space around whole website */
+    background-color: var(--base-color);   /* Page background */
+}
+
+/* Heading fonts (h1, h2, h3) */
+h1, h2, h3 {
+    font-family: Merriweather, poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* ------------------------------
+   NAVIGATION BAR (TOP MENU)
+   ------------------------------ */
+
+nav {
+    margin: 1em auto 3em auto; /* Top, right, bottom, left spacing */
+    width: min(75em, 100%);    /* Maximum width */
+}
+
+nav ul {
+    display: flex;             /* Items sit in a row */
+    align-items: center;       
+    list-style-type: none;     /* Removes bullet points */
+    gap: 2em;                  /* Space between menu items */
+}
+
+nav li:first-child {
+    margin-right: auto;        /* Pushes others to the right */
+    font-family: Merriweather; /* Fancy font for name */
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;      /* Removes underline from links */
+    color: var(--text-color);   /* Text color */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underline appears on hover */
+}
+
+
+/* ------------------------------
+   HEADER + SECTIONS GENERAL STYLE
+   ------------------------------ */
+
+header, section {
+    margin: 2em auto;                    /* Outer spacing */
+    width: min(75em, 100%);              /* Page width */
+    background-color: var(--color-1);    /* Light background */
+    padding: min(2em, 15%);              /* Inner spacing */
+    border-radius: 1em;                  /* Rounded corners */
+}
+
+
+/* ------------------------------
+   FLEX CONTAINERS (side by side)
+   ------------------------------ */
+
+.flex-container {
+    display: flex;            /* Items side by side */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;          /* Move to next line on small screens */
+    gap: 3em;                 /* Space between items */
+}
+
+header img {
+    max-width: 100%;         /* Image becomes responsive */
+    border-radius: 1em;      /* Rounded image corners */
+    object-fit: cover;       /* Image stays neat */
+    object-position: bottom; /* Shows bottom part of image */
+}
+
+.text-container {
+    flex: 0 1 34em; /* grow, shrink, width limit */
+}
+
+
+/* ------------------------------
+   TEXT STYLES
+   ------------------------------ */
+
+h1 {
+    font-size: 2rem;          /* Big main heading */
+}
+
+.text-container p {
+    margin: .75em 0 1em 0;    /* Space around paragraph */
+    font-size: 1.25rem;       /* Slightly bigger text */
+}
+
+
+/* ------------------------------
+   BUTTON STYLES
+   ------------------------------ */
+
+.cta-button {
+    display: inline-block;            /* Makes it behave like a button */
+    text-decoration: none;            /* No underline */
+    color: #fefdfd;                   /* White text */
+    background-color: var(--primary-color); /* Yellow background */
+    padding: .75em 1.25em;            /* Inner spacing */
+    border-radius: .5em;              /* Rounded edges */
+    font-weight: 600;                 /* Bold text */
+}
+
+.secondary {
+    background-color: var(--secondary-color); /* Blue button */
+}
+
+
+/* ------------------------------
+   SECTION STYLES
+   ------------------------------ */
+
+section {
+    padding: 3em min(2em, 15%);      /* Inner spacing */
+    background-color: var(--color-2); /* Light grey background */
+    text-align: center;              /* Center align text */
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+section p {
+    margin-top: 1em;
+    font-size: 1.25rem;
+}
+
+section#my-work {
+    background-color: var(--color-3); /* Slightly different shade */
+}
+
+
+/* ------------------------------
+   IMAGE GRID (GALLERY)
+   ------------------------------ */
+
+.grid-container {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: grid; /* Makes a photo grid */
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    grid-template-rows: 1fr 1fr;           /* 2 rows */
+    grid-template-areas:
+        "img-1 img-1 img-2 img-3"
+        "img-1 img-1 img-4 img-5";
+    gap: 1em; /* Space between images */
+}
+
+.grid-container img {
+    height: 100%;
+    width: 100%;
+    border-radius: .5em;     /* Rounded edges */
+    transition: 100ms ease;  /* Smooth hover effect */
+}
+
+.grid-container img:hover {
+    scale: 1.05;             /* Slight zoom on hover */
+}
+
+
+/* ------------------------------
+   FAQ SECTION (details tag)
+   ------------------------------ */
+
+details {
+    margin-top: 1em;
+    border-color: var(--base-color);
+    border-radius: 1em;
+}
+
+details summary {
+    padding: 1em;
+    font-size: 1.7rem;        /* Bigger clickable text */
+    font-family: Merriweather;
+}
+
+details p {
+    padding: 0 2em 2em 2em;   /* Inner spacing inside FAQ */
+}
+
+
+/* ------------------------------
+   FOOTER
+   ------------------------------ */
+
+footer {
+    padding-bottom: 1.5em;
+    text-align: center;
+}
+
+footer a {
+    margin: 0 1em;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* ------------------------------
+   RESPONSIVE DESIGN (small screens)
+   ------------------------------ */
+
+@media(max-width: 980px) {
+    header {
+        text-align: center;        /* Everything centered */
+    }
+
+    header .text-container {
+        padding-top: 0;            /* Removes extra space */
+    }
+}
+
+@media(max-width: 635px) {
+    nav li {
+        display: none;             /* Hide all menu items */
+    }
+
+    nav li:first-child,
+    nav li:last-child {
+        display: block;            /* Only show name + contact */
+    }
+
+    header {
+        margin-top: 0;
+    }
+
+    .cta-button {
+        margin-top: .5em;
+        width: 100%;               /* Buttons become full width */
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;    /* Stack photos vertically */
+    }
+
+    .text-container p {
+        font-size: 1rem;           /* Smaller text on mobile */
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
